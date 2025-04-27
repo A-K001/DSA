@@ -46,7 +46,7 @@ using namespace std;
 //     }
 // }
 
-void PrintRowSum(int arr[][3], int row , int col){
+void PrintRowSum(int arr[][3]){
     for (int i = 0 ; i < 3 ; i++){
         int sum = 0 ;
         for (int j = 0 ; j <3 ; j++ ){
@@ -55,7 +55,7 @@ void PrintRowSum(int arr[][3], int row , int col){
         cout << "Sum of row " << i << " is : " << sum << endl;
     }
 }
-void PrintColSum(int arr[][3], int row , int col){
+void PrintColSum(int arr[][3]){
     for (int i = 0 ; i < 3 ; i++){
         int sum = 0 ;
         for (int j = 0 ; j <3 ; j++ ){
@@ -81,7 +81,7 @@ int main() {
         }
         cout << endl;
     }
-    PrintRowSum(arr,3,3);
-    PrintColSum(arr,3,3);
+    PrintRowSum(arr);
+    PrintColSum(arr);
     return 0;
 }
