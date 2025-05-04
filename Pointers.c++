@@ -47,17 +47,33 @@ using namespace std;
 
 
 // ? pointers and functions
-void update (int *p) {
-    // ! this will update the value of p to 10
-    *p = 10; // ! this will update the value of n to 10
-}
+// void update (int *p) {
+//     // ! this will update the value of p to 10
+//     *p = 10; // ! this will update the value of n to 10
+// }
     
+// int main () {
+//     int n = 5;
+//     int *p = &n; 
+//     cout << "The value of n before update is : " << n << endl;
+//     cout << "The value of p before update is : " << *p << endl;
+//     update(p);
+//     cout << "The value of n after update is : " << n << endl;
+//     cout << "The value of p after update is : " << *p << endl;
+// }
+
+
+// ? Double pointer
 int main () {
     int n = 5;
-    int *p = &n; 
-    cout << "The value of n before update is : " << n << endl;
-    cout << "The value of p before update is : " << *p << endl;
-    update(p);
-    cout << "The value of n after update is : " << n << endl;
-    cout << "The value of p after update is : " << *p << endl;
+    int *p = &n; // ! pointer to n
+    int **q = &p; // ! double pointer to p
+    int ***r = &q; // ! triple pointer to q
+    cout << "The value of n is : " << n << endl;
+    cout << "The value of p is : " << *p << endl;
+    cout << "The value of q is : " << **q << endl;
+    cout << "The address of n is : " << &n << endl;
+    cout << "The address of p is : " << &p << endl;
+    cout << "The address of q is : " << &q << endl;
 }
+
