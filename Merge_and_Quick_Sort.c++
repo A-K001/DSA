@@ -177,67 +177,67 @@ mergeSort(0, 3)      // depth 0
 
 
 // ? Quick Sort
-int partition (int arr [] , int s , int e ) {
-    int idx = s;
-    int pivot = arr[s];
-    for (int j = s + 1 ; j <= e ; j++ ) {
-        cout << "j = " << j << endl;
-        if (arr[j] <= pivot) {
-            idx ++;
-            cout << "idx = " << idx << endl;
-            swap(arr[idx] , arr[j]);
-            for (int i = s; i < e+1; i++) {
-                cout << arr[i] << " ";
-            }
-            cout << endl;
-        }
-    }
-    cout << "pivot = " << pivot << endl;
-    cout << "idx out side = " << idx << endl;
-    cout << "s = " << s << endl;
-    cout << "e = " << e << endl;
-    cout << endl;
-    swap(arr[s] , arr[idx]);
-    return idx;
-}
+// int partition (int arr [] , int s , int e ) {
+//     int idx = s;
+//     int pivot = arr[s];
+//     for (int j = s + 1 ; j <= e ; j++ ) {
+//         cout << "j = " << j << endl;
+//         if (arr[j] <= pivot) {
+//             idx ++;
+//             cout << "idx = " << idx << endl;
+//             swap(arr[idx] , arr[j]);
+//             for (int i = s; i < e+1; i++) {
+//                 cout << arr[i] << " ";
+//             }
+//             cout << endl;
+//         }
+//     }
+//     cout << "pivot = " << pivot << endl;
+//     cout << "idx out side = " << idx << endl;
+//     cout << "s = " << s << endl;
+//     cout << "e = " << e << endl;
+//     cout << endl;
+//     swap(arr[s] , arr[idx]);
+//     return idx;
+// }
 
-void quickSort (int arr [] , int s , int e) {
-    if (s >= e) {
-        return ;
-    }
-    int pidx = partition(arr , s , e);
-    quickSort(arr , s , pidx - 1);
-    quickSort(arr , pidx + 1 , e);
-    return ;
-} 
+// void quickSort (int arr [] , int s , int e) {
+//     if (s >= e) {
+//         return ;
+//     }
+//     int pidx = partition(arr , s , e);
+//     quickSort(arr , s , pidx - 1);
+//     quickSort(arr , pidx + 1 , e);
+//     return ;
+// } 
 
-void print (int arr [] , int n) {
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
+// void print (int arr [] , int n) {
+//     for (int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+// }
 
-int main (){
-    int n;
-    cout << "Enter the size of the array : " ;
-    cin >> n;
-    int *arr = new int[n] ;
-    cout << "Enter the elements of the array : " ;
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-    cout << endl;
-    cout << "The elements of the array are : " ;
-    print(arr , n);
-    cout << endl;
-    quickSort(arr , 0 , n - 1 );
-    cout << "The sorted array is : " ;
-    print (arr , n);
-    cout << endl;
-    delete [] arr;
-    return 0;
-}
+// int main (){
+//     int n;
+//     cout << "Enter the size of the array : " ;
+//     cin >> n;
+//     int *arr = new int[n] ;
+//     cout << "Enter the elements of the array : " ;
+//     for (int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+//     cout << endl;
+//     cout << "The elements of the array are : " ;
+//     print(arr , n);
+//     cout << endl;
+//     quickSort(arr , 0 , n - 1 );
+//     cout << "The sorted array is : " ;
+//     print (arr , n);
+//     cout << endl;
+//     delete [] arr;
+//     return 0;
+// }
 
 /*
 Recursive tree for the example [5, 3, 8, 4, 2] 
