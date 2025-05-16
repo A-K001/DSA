@@ -28,6 +28,7 @@ using namespace std;
 // }
 
 
+
 // ? OOPS concepts
 // #include <iostream>
 // #include <cstring>
@@ -148,6 +149,24 @@ using namespace std;
 //     cout << endl << "Program ending..." << endl;
 //     return 0;
 // }
+
+// ? Using Dot (.) — when you have the object:
+// [ h1 ]
+//  └─> health = 100
+//  └─> level = 'A'
+//  └─> name = "Archer"
+//  └─> heroCount = 1
+//  └─> getHeroCount() = 1
+//  └─> setHealth(100) and more ...
+
+// ? Using Arrow (->) — when you have a pointer to object
+// [ hPtr ] --(points to)--> [ Hero object ]
+//                             └─> health = 200
+//                             └─> level = 'B'
+//                             └─> name = "Blazer"
+//                             └─> heroCount = 1
+//                             └─> getHeroCount() = 1
+//                             └─> setHealth(200) and more ...
 
 
 // ? encapsulation
@@ -341,15 +360,11 @@ public:
 
 class Cat : public Animal {
     // ! this function is not overriding the base class function so it will also remain an abstract class
-public:
-    void sound() {
-        cout << "Cat meows\n";
-    }
 };
 
 class Dog : public Animal {
 public:
-    void sound() override {
+    void sound() override { // ! here typing override is optional but its good practice 
         cout << "Dog barks\n";
     }
 };
@@ -359,7 +374,6 @@ int main (){
     d.sound(); // Calls the overridden function in Dog class
     // Car c; // ! this will give error because it is an abstract class
     // c.start();
-    Cat c1; // ! this will give error because it is an abstract class
-    c1.sound(); // Calls the overridden function in Cat class
+    // Cat c1; // ! this will give error because it is an abstract class
     return 0;
 }
