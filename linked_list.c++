@@ -451,8 +451,8 @@ using namespace std;
 // ? Circular Linked List
 class Node {
     public:
-    int data;
-    Node* next;
+        int data;
+        Node* next;
 
     //constrcutor
     Node(int d) {
@@ -558,12 +558,11 @@ int main() {
 
     Node* tail = NULL;
 
-   insertNode(tail, 5, 3);
+    insertNode(tail, 5, 3);
     print(tail);
 
-   insertNode(tail, 3, 5);
-   print(tail);
-
+    insertNode(tail, 3, 5);
+    print(tail);
 
     insertNode(tail, 5, 7);
     print(tail);
@@ -580,7 +579,6 @@ int main() {
     insertNode(tail, 3, 4);
     print(tail);
    
-
     deleteNode(tail, 5);
     print(tail);
 
